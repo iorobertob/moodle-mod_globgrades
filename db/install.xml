@@ -7,6 +7,7 @@
     <TABLE NAME="globgrades" COMMENT="Each record is one globgrades instance and its config data">
       <FIELDS>
         <FIELD NAME="id"              TYPE="int"  LENGTH="10"  NOTNULL="true"              SEQUENCE="true"/>
+        <FIELD NAME="intro"           TYPE="text"              NOTNULL="false"             SEQUENCE="false"/>
         <FIELD NAME="course"          TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
         <FIELD NAME="student_name"    TYPE="char" LENGTH="255" NOTNULL="true"              SEQUENCE="false"/>
         <FIELD NAME="course_name"     TYPE="char" LENGTH="255" NOTNULL="true"              SEQUENCE="false"/>
