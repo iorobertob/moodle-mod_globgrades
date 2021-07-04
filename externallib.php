@@ -62,7 +62,7 @@ class mod_globgrades_external extends external_api {
 
 
         $new_grade = new stdClass();
-        $new_grade -> course = $params -> welcomemessage;
+        $new_grade -> course = $params['welcomemessage'];
         $new_grade -> student_name = "ramon";
         $new_grade -> course_name = "programavimas";
         $new_grade -> grade = 98;
