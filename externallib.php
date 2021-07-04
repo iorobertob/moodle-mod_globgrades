@@ -30,7 +30,12 @@ class mod_globgrades_external extends external_api {
      */
     public static function hello_world_parameters() {
         return new external_function_parameters(
-                array('welcomemessage' => new external_value(PARAM_TEXT, 'The welcome message. By default it is "Hello world,"', VALUE_DEFAULT, 'Hello world, '))
+                array(  'course'        => new external_value(PARAM_TEXT, 'Default course', VALUE_DEFAULT, 'Course name'),
+                        'student_name'  => new external_value(PARAM_TEXT, 'Default student ', VALUE_DEFAULT, 'Student name ')
+                        'course_name'   => new external_value(PARAM_TEXT, 'Default course name', VALUE_DEFAULT, 'Course name') 
+                        'grade'         => new external_value(PARAM_INT, 'Default grade', VALUE_DEFAULT, 0) 
+                        'gradedate'     => new external_value(PARAM_INT, 'Default date', VALUE_DEFAULT, 0) 
+                        'teacher_name'  => new external_value(PARAM_TEXT, 'Default teacher', VALUE_DEFAULT, 'Teacher name')  )
         );
     }
 
@@ -38,13 +43,18 @@ class mod_globgrades_external extends external_api {
      * Returns welcome message
      * @return string welcome message
      */
-    public static function hello_world($welcomemessage = 'Hello world, ') {
+    public static function hello_world($course = 'Course name', $student_name = "student name", $course_name = "course_name", $grade=0, $gradedate=0, $teacher_name="teacher name") {
         global $USER, $DB;
 
         // //Parameter validation
         // //REQUIRED
         $params = self::validate_parameters(self::hello_world_parameters(),
-                array('welcomemessage' => $welcomemessage));
+                array(  'course'        => $course),
+                        'student_name'  => $student_name),
+                        'course_name'   => $course_name),
+                        'grade'         => $grade),
+                        'gradedate'     => $gradedate),
+                        'teacher_name'  => $teacher_name),);
 
         //Context validation
         //OPTIONAL but in most web service it should present
@@ -62,13 +72,13 @@ class mod_globgrades_external extends external_api {
 
 
         $new_grade = new stdClass();
-        $new_grade -> course = $params['welcomemessage'];
-        $new_grade -> student_name = "ramon";
-        $new_grade -> course_name = "programavimas";
-        $new_grade -> grade = 98;
-        $new_grade -> gradedate = 239084;
-        $new_grade -> teacher_name = "roberto";
-
+        $new_grade -> course = $params['course'];
+        $new_grade -> student_name = $params['student_name'];
+        $new_grade -> course_name = $params['course_name'];
+        $new_grade -> grade = $params['grade'];
+        $new_grade -> gradedate = $params['gradedate'];
+        $new_grade -> teacher_name = $params['teacher_name'];
+t
         $id = $DB->insert_record('globgradesgrades', $new_grade);
 
         return "oh lala: ".$id;
