@@ -64,21 +64,21 @@ $PAGE->set_title(format_string($moduleinstance->name));
 $PAGE->set_heading(format_string($course->fullname));
 
 //=============================  GET FILE===================================
-$fs = get_file_storage();
+// $fs = get_file_storage();
 
-$files = $fs->get_area_files($modulecontext->id, 'mod_globgrades', 'content', 0, 'sortorder DESC, id ASC', false); // TODO: this is not very efficient!!
+// $files = $fs->get_area_files($modulecontext->id, 'mod_globgrades', 'content', 0, 'sortorder DESC, id ASC', false); // TODO: this is not very efficient!!
 
-if (count($files) < 1) {
-    resource_print_filenotfound($moduleinstance, $cm, $course);
-} else {
-    $file = reset($files);
-    $fileurl = moodle_url::make_pluginfile_url($file->get_contextid(), $file->get_component(), $file->get_filearea(), $file->get_itemid(), $file->get_filepath(), $file->get_filename(), false);
+// if (count($files) < 1) {
+//     resource_print_filenotfound($moduleinstance, $cm, $course);
+// } else {
+//     $file = reset($files);
+//     $fileurl = moodle_url::make_pluginfile_url($file->get_contextid(), $file->get_component(), $file->get_filearea(), $file->get_itemid(), $file->get_filepath(), $file->get_filename(), false);
 
-    $fileid  =  $file->get_id();  
-    $fileid  =  $file->get_contenthash(); 
-    $fileurl = $CFG->dataroot."/filedir/".substr($fileid, 0,2)."/".substr($fileid, 2,2)."/".$fileid;
+//     $fileid  =  $file->get_id();  
+//     $fileid  =  $file->get_contenthash(); 
+//     $fileurl = $CFG->dataroot."/filedir/".substr($fileid, 0,2)."/".substr($fileid, 2,2)."/".$fileid;
 
-    unset($files);
+//     unset($files);
 }
 //=============================  /GET FILE    ===================================
 
