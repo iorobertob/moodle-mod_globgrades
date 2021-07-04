@@ -91,7 +91,10 @@ if ($moduleinstance->inputdisplay === "1"){
     echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
 }
 else{
-    echo (globgrades_build_grades_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+    $grades = $DB->get_records("globgradesgrades", null, '', "student_name,course_name,grade,gradedate,teacher_name");
+    echo ($grades);
+    echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+    // echo (globgrades_build_grades_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));git
 }
 
 
