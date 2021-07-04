@@ -23,20 +23,21 @@
 
 // We defined the web service functions to install.
 $functions = array(
-        'local_wstemplate_hello_world' => array(
+        'mod_globgrades_hello_world' => array(
                 'classname'   => 'mod_globgrades_external',
                 'methodname'  => 'hello_world',
                 'classpath'   => 'mod/globgrades/externallib.php',
                 'description' => 'Return Hello World FIRSTNAME. Can change the text (Hello World) sending a new text as parameter',
                 'type'        => 'read',
-        )
+        ) 
 );
 
 // We define the services to install as pre-build services. A pre-build service is not editable by administrator.
 $services = array(
-        'My service' => array(
+        'Grades service' => array(
                 'functions' => array ('mod_globgrades_hello_world'),
                 'restrictedusers' => 0,
                 'enabled'=>1,
+                'shortname' =>  'grades_service',
         )
 );
