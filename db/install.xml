@@ -6,19 +6,19 @@
   <TABLES>
     <TABLE NAME="globgrades" COMMENT="Each record is one globgrades instance and its config data">
       <FIELDS>
-        <FIELD NAME="id"              TYPE="int"  LENGTH="10"  NOTNULL="true"             SEQUENCE="true"/>
-        <FIELD NAME="course"          TYPE="int"  LENGTH="10"  NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="student_name"    TYPE="char" LENGTH="255" NOTNULL="true"             SEQUENCE="false"/>
-        <FIELD NAME="course_name"     TYPE="char" LENGTH="255" NOTNULL="true"             SEQUENCE="false"/>
-        <FIELD NAME="grade"           TYPE="int"  LENGTH="10"  NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="gradedate"       TYPE="int"  LENGTH="10"  NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="teacher_name"    TYPE="char" LENGTH="255" NOTNULL="true"             SEQUENCE="false"/>
-        <FIELD NAME="inputdisplay"    TYPE="text"              NOTNULL="false"DEFAULT="1" SEQUENCE="false"/>
-        <FIELD NAME="tobemigrated"    TYPE="int"  LENGTH="4"   NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="display"         TYPE="int"  LENGTH="4"   NOTNULL="true" DEFAULT="0" SEQUENCE="false"/>
-        <FIELD NAME="displayoptions"  TYPE="text"              NOTNULL="false"            SEQUENCE="false"/>
-        <FIELD NAME="revision"        TYPE="int"  LENGTH="10"  NOTNULL="true" DEFAULT="0"                   COMMENT="incremented when after each file changes, solves browser caching issues"/>
-        <FIELD NAME="timemodified"    TYPE="int"  LENGTH="10"   NOTNULL="true"DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="id"              TYPE="int"  LENGTH="10"  NOTNULL="true"              SEQUENCE="true"/>
+        <FIELD NAME="course"          TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="student_name"    TYPE="char" LENGTH="255" NOTNULL="true"              SEQUENCE="false"/>
+        <FIELD NAME="course_name"     TYPE="char" LENGTH="255" NOTNULL="true"              SEQUENCE="false"/>
+        <FIELD NAME="grade"           TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="gradedate"       TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="teacher_name"    TYPE="char" LENGTH="255" NOTNULL="true"              SEQUENCE="false"/>
+        <FIELD NAME="inputdisplay"    TYPE="text"              NOTNULL="false" DEFAULT="1" SEQUENCE="false"/>
+        <FIELD NAME="tobemigrated"    TYPE="int"  LENGTH="4"   NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="display"         TYPE="int"  LENGTH="4"   NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
+        <FIELD NAME="displayoptions"  TYPE="text"              NOTNULL="false"             SEQUENCE="false"/>
+        <FIELD NAME="revision"        TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="true" gi COMMENT="incremented when after each file changes, solves browser caching issues" />
+        <FIELD NAME="timemodified"    TYPE="int"  LENGTH="10"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
       </FIELDS>
       <KEYS>
         <KEY  NAME="primary"          TYPE="primary" FIELDS="id"/>
