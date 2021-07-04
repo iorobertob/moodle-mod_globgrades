@@ -54,7 +54,7 @@ class mod_globgrades_external extends external_api {
                         'course_name'   => $course_name,
                         'grade'         => $grade,
                         'gradedate'     => $gradedate,
-                        'teacher_name'  => $teacher_name);
+                        'teacher_name'  => $teacher_name));
 
         //Context validation
         //OPTIONAL but in most web service it should present
