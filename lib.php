@@ -75,7 +75,7 @@ function globgrades_add_instance($moduleinstance, $mform = null) {
     
     $DB->set_field('course_modules', 'instance', $id, array('id'=>$cmid));
     
-    $file_url = globgrades_set_mainfile($moduleinstance);
+    // $file_url = globgrades_set_mainfile($moduleinstance);
     
     $completiontimeexpected = !empty($moduleinstance->completionexpected) ? $moduleinstance->completionexpected : null;
     
@@ -112,7 +112,7 @@ function globgrades_update_instance($moduleinstance, $mform = null) {
 
     $DB->update_record('globgrades', $moduleinstance);
 
-    globgrades_set_mainfile($moduleinstance);
+    // globgrades_set_mainfile($moduleinstance);
 
     $completiontimeexpected = !empty($moduleinstance->completionexpected) ? $moduleinstance->completionexpected : null;
     \core_completion\api::update_completion_date_event($moduleinstance->coursemodule, 'globgrades', $moduleinstance->id, $completiontimeexpected);
