@@ -94,10 +94,10 @@ else{
     $grades = $DB->get_records("globgradesgrades", null, '', "student_name,course_name,grade,gradedate,teacher_name");
     
     $the_big_array = array(array( "Student", "Course", "Grade", "Date", "Teacher"));
-    foreach($grades as $one_grade){
-        $gradeArray = array( one_grade->student_name, one_grade->course_name, one_grade->grade, one_grade->gradedate, one_grade->teacher_name );
-        $the_big_array[] = $gradeArray;
-    }
+    // foreach($grades as $one_grade){
+    //     $gradeArray = array( one_grade->student_name, one_grade->course_name, one_grade->grade, one_grade->gradedate, one_grade->teacher_name );
+    //     $the_big_array[] = $gradeArray;
+    // }
     
     // echo (globgrades_build_input_table("", $course, "separator", $moduleinstance->name));
     // echo (globgrades_build_grades_table("url", $course, "separator", $moduleinstance->name),$the_big_array);
