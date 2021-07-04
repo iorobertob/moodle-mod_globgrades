@@ -92,7 +92,7 @@ if ($moduleinstance->inputdisplay === "1"){
 }
 else{
     $grades = $DB->get_records("globgradesgrades", null, '', "student_name,course_name,grade,gradedate,teacher_name");
-    var_dump($grades);
+    var_dump($grades[0]);
     
     echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
     // echo (globgrades_build_grades_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));git
