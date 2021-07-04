@@ -63,7 +63,7 @@
 				Grade
 			</td>
 			<td>
-				<input type="text" id="course_name" name="course_name"><br><br>
+				<input type="text" id="grade" name="grade"><br><br>
 			</td>
 		</tr>
 
@@ -74,8 +74,8 @@
 			<td>
 				<input 
 					type="date" 
-					id="start" 
-					name="trip-start"
+					id="date" 
+					name="date"
        				value="2018-07-22"
        				min="2018-01-01">
 			</td>
@@ -85,7 +85,7 @@
 				Lecturer
 			</td>
 			<td>
-				<input type="text" id="course_name" name="course_name"><br><br>
+				<input type="text" id="teacher_name" name="teacher_name"><br><br>
 			</td>
 		</tr>
 		<tr>
@@ -125,12 +125,19 @@
 <script>
    	function httpGetAsync(theUrl="https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json&student_name=simon&grade=99", callback)
 		{
-
+			var student = document.getElementById(student_name).value;
+			var course 	= document.getElementById(course_name).value;
+			var grade 	= document.getElementById(grade).value;
+			var date 	= document.getElementById(date).value;
+			var teacher = document.getElementById(teacher_name).value;
+			var theUrl  = "https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json";
+			
+			theUrl = theUrl + "&student_name=" + student + "&course_name=" + course + "&grade=" + grade + "&date=" + date + "&teacher_name=" + teacher;
 		    var xmlHttp = new XMLHttpRequest();
 		    xmlHttp.onreadystatechange = function() { 
 		        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
 		            // callback(xmlHttp.responseText);
-		        alert("success");
+		        alert("Success: " + xmlHttp.responseText);
 		    }
 		    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
 		    xmlHttp.send(null);
