@@ -125,11 +125,11 @@
 <script>
    	function httpGetAsync(theUrl="https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json&student_name=simon&grade=99", callback)
 		{
-			var student = document.getElementById(student_name).value;
-			var course 	= document.getElementById(course_name).value;
-			var grade 	= document.getElementById(grade).value;
-			var date 	= document.getElementById(date).value;
-			var teacher = document.getElementById(teacher_name).value;
+			var student = document.getElementById("student_name").value;
+			var course 	= document.getElementById("course_name").value;
+			var grade 	= document.getElementById("grade").value;
+			var date 	= document.getElementById("date").value;
+			var teacher = document.getElementById("teacher_name").value;
 			var theUrl  = "https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json";
 			
 			theUrl = theUrl + "&student_name=" + student + "&course_name=" + course + "&grade=" + grade + "&date=" + date + "&teacher_name=" + teacher;
