@@ -49,12 +49,12 @@ class mod_globgrades_external extends external_api {
         // //Parameter validation
         // //REQUIRED
         $params = self::validate_parameters(self::hello_world_parameters(),
-                array(  'course'        => $course),
-                        'student_name'  => $student_name),
-                        'course_name'   => $course_name),
-                        'grade'         => $grade),
-                        'gradedate'     => $gradedate),
-                        'teacher_name'  => $teacher_name),);
+                array(  'course'        => $course,
+                        'student_name'  => $student_name,
+                        'course_name'   => $course_name,
+                        'grade'         => $grade,
+                        'gradedate'     => $gradedate,
+                        'teacher_name'  => $teacher_name);
 
         //Context validation
         //OPTIONAL but in most web service it should present
