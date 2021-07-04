@@ -66,21 +66,8 @@ class mod_globgrades_mod_form extends moodleform_mod {
             $this->add_intro_editor();
         }
 
-        //========================   FILE PIKCER ==========================================
-        $element = $mform->getElement('introeditor');
-        $attributes = $element->getAttributes();
-        $attributes['rows'] = 5;
-        $element->setAttributes($attributes);
-        $filemanager_options = array();
-        $filemanager_options['accepted_types'] = '*';
-        $filemanager_options['maxbytes'] = 0;
-        $filemanager_options['maxfiles'] = -1;
-        $filemanager_options['mainfile'] = true;
-
-        $mform->addElement('filemanager', 'files', get_string('selectfiles'), null, $filemanager_options);
-        //========================   FILE PIKCER ==========================================
-
-        $mform->addElement('select', 'separationchar', 'Separation character', array(';'=>';', ','=>',', '/'=>'/'));
+        //========================  Interface choice ==========================================
+        $mform->addElement('advcheckbox', 'input-display', get_string('inputdisplay', 'globgrades'), '', array('group' => 1), array(0, 1));
 
         // Adding the rest of mod_globgrades settings, spreading all them into this fieldset
         // ... or adding more fieldsets ('header' elements) if needed for better logic.

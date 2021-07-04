@@ -86,7 +86,14 @@ $PAGE->set_context($modulecontext);
 
 echo $OUTPUT->header();
 
-echo (globgrades_build_html_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+
+if ($moduleinstance->inputdisplay === "1"){
+    echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+}
+else{
+    echo (globgrades_build_grades_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+}
+
 
 echo $OUTPUT->footer();
 

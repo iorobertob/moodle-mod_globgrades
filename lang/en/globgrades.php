@@ -29,6 +29,7 @@ $string['choosereadme'] = 'Readme when selecting the theme.';
 $string['globgradesname'] = 'Name:';
 $string['globgradesname_help'] = 'Give a name to be displayed';
 $string['globgradessettings'] = 'Settings';
+$string['inputdisplay'] = 'Display input form?';
 $string['globgrades:name'] = 'Name';
 $string['globgrades:edit'] = 'Edit test';
 $string['globgrades:enrol'] = 'Enrol users';

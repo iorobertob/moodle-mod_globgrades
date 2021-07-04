@@ -83,7 +83,18 @@ class globgrades_content_file_info extends file_info_stored {
 }
 
 
-function globgrades_build_html_table($file_url, $course, $separator, $name)
+function globgrades_build_input_table($file_url, $course, $separator, $name)
+{
+    global $PAGE, $DB;
+ 
+    // Detect line breaks, otherwise fgetcsv will return all rows
+    ini_set('auto_detect_line_endings', true);
+
+    return include 'template_input.php';
+}
+
+
+function globgrades_build_grades_table($file_url, $course, $separator, $name)
 {
     global $PAGE, $DB;
  

@@ -80,15 +80,36 @@
        				min="2018-01-01">
 			</td>
 		</tr>
+		<tr>
+			<td>
+				Lecturer
+			</td>
+			<td>
+				<input 
+					type="date" 
+					id="start" 
+					name="trip-start"
+       				value="2018-07-22"
+       				min="2018-01-01">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				
+			</td>
+			<td>
+				<button data-playing="false" 
+						class="tape-controls-play" 
+						role="switch" 
+						aria-checked="false">
+					<span>Save</span>
+				</button>
+			</td>
+		</tr>
 	</tbody>
 </table>
 
-<button data-playing="false" 
-		class="tape-controls-play" 
-		role="switch" 
-		aria-checked="false">
-	<span>Submit</span>
-</button>
+
 
 <script>
     $(document).ready(function() 
@@ -96,7 +117,10 @@
 	    $('#the_table').DataTable({
 	        fixedHeader: true,
 	        scrollY: '1000px',
-	        responsive:true
+	        responsive:true,
+	        searching:false,
+	        paging:false,
+    		bLengthChange: false,
 	        });
     });
 </script>
