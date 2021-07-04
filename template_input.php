@@ -96,7 +96,8 @@
 				<button data-playing="false" 
 						class="tape-controls-play" 
 						role="switch" 
-						aria-checked="false">
+						aria-checked="false"
+						onclick="httpGetAsync()">
 					<span>Save</span>
 				</button>
 			</td>
@@ -122,5 +123,16 @@
 </script>
 
 <script>
-   
+   	function httpGetAsync(theUrl="https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json&student_name=simon&grade=99", callback)
+		{
+
+		    var xmlHttp = new XMLHttpRequest();
+		    xmlHttp.onreadystatechange = function() { 
+		        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+		            // callback(xmlHttp.responseText);
+		        alert("success");
+		    }
+		    xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+		    xmlHttp.send(null);
+		}
 </script>
