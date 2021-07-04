@@ -94,31 +94,31 @@ function globgrades_build_input_table($file_url, $course, $separator, $name)
 }
 
 
-function globgrades_build_grades_table($file_url, $course, $separator, $name)
+function globgrades_build_grades_table($file_url, $course, $separator, $name, $the_big_array)
 {
     global $PAGE, $DB;
  
     // Detect line breaks, otherwise fgetcsv will return all rows
-    ini_set('auto_detect_line_endings', true);
+    // ini_set('auto_detect_line_endings', true);
 
-    // The nested array to hold all the arrays
-    $the_big_array = []; 
+    // // The nested array to hold all the arrays
+    // $the_big_array = []; 
 
-    // Open the file for reading
-    if (($h = fopen($file_url, "r")) !== FALSE) 
-    {
-        // Each line in the file is converted into an individual array that we call $data
-        // The items of the array are comma separated
-        while (($data = fgetcsv($h, 1000, $separator)) !== FALSE) 
-        {
-            // Each individual array is being pushed into the nested array
-            $the_big_array[] = $data;       
-        }
+    // // Open the file for reading
+    // if (($h = fopen($file_url, "r")) !== FALSE) 
+    // {
+    //     // Each line in the file is converted into an individual array that we call $data
+    //     // The items of the array are comma separated
+    //     while (($data = fgetcsv($h, 1000, $separator)) !== FALSE) 
+    //     {
+    //         // Each individual array is being pushed into the nested array
+    //         $the_big_array[] = $data;       
+    //     }
 
-      // Close the file
-      fclose($h);
-    }
-    return include 'template.php';
+    //   // Close the file
+    //   fclose($h);
+    // }
+    return include 'template_table.php';
 }
 
 
