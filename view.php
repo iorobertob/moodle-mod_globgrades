@@ -88,13 +88,13 @@ echo $OUTPUT->header();
 
 
 if ($moduleinstance->inputdisplay === "1"){
-    echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+    echo (globgrades_build_input_table("", $course, $moduleinstance->separationchar, $moduleinstance->name));
 }
 else{
-    $grades = $DB->get_records("globgradesgrades", null, '', "student_name,course_name,grade,gradedate,teacher_name");
+    $grades = $DB->get_records("globgradesgrades", null, '', "id,student_name,course_name,grade,gradedate,teacher_name");
     var_dump($grades[1]);
     
-    echo (globgrades_build_input_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));
+    echo (globgrades_build_input_table("", $course, $moduleinstance->separationchar, $moduleinstance->name));
     // echo (globgrades_build_grades_table($fileurl, $course, $moduleinstance->separationchar, $moduleinstance->name));git
 }
 
