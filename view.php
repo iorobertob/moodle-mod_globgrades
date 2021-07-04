@@ -100,7 +100,7 @@ else{
     }
     
     // echo (globgrades_build_input_table("", $course, "separator", $moduleinstance->name));
-    // echo (globgrades_build_grades_table("url", $course, "separator", $moduleinstance->name),$the_big_array);
+    echo (globgrades_build_grades_table("url", $course, "separator", $moduleinstance->name),$the_big_array);
 }
 
 
