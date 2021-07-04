@@ -85,12 +85,7 @@
 				Lecturer
 			</td>
 			<td>
-				<input 
-					type="date" 
-					id="start" 
-					name="trip-start"
-       				value="2018-07-22"
-       				min="2018-01-01">
+				<input type="text" id="course_name" name="course_name"><br><br>
 			</td>
 		</tr>
 		<tr>
@@ -121,6 +116,7 @@
 	        searching:false,
 	        paging:false,
     		bLengthChange: false,
+    		bSort:false,
 	        });
     });
 </script>
