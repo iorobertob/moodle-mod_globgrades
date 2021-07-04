@@ -67,7 +67,7 @@ class mod_globgrades_mod_form extends moodleform_mod {
         }
 
         //========================  Interface choice ==========================================
-        $mform->addElement('advcheckbox', 'input-display', get_string('inputdisplay', 'globgrades'), '', array('group' => 1), array(0, 1));
+        $mform->addElement('advcheckbox', 'inputdisplay', get_string('inputdisplay', 'globgrades'), '', array('group' => 1), array(0, 1));
 
         // Adding the rest of mod_globgrades settings, spreading all them into this fieldset
         // ... or adding more fieldsets ('header' elements) if needed for better logic.
