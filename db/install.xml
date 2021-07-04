@@ -25,7 +25,7 @@
       </INDEXES>
     </TABLE>
 
-    <TABLE NAME="globgrades_grades" COMMENT="Records of the actual grades">
+    <TABLE NAME="globgradesgrades" COMMENT="Records of the actual grades">
       <FIELDS>
         <FIELD NAME="id"              TYPE="int"  LENGTH="10"  NOTNULL="true"              SEQUENCE="true"/>
         <FIELD NAME="course"          TYPE="char" LENGTH="255"  NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
