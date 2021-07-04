@@ -39,7 +39,7 @@ class mod_globgrades_external extends external_api {
      * @return string welcome message
      */
     public static function hello_world($welcomemessage = 'Hello world, ') {
-        global $USER;
+        global $USER, $DB;
 
         // //Parameter validation
         // //REQUIRED
