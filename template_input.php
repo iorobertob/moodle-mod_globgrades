@@ -132,7 +132,7 @@
 			var teacher = document.getElementById("teacher_name").value;
 			var theUrl  = "https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json";
 			
-			theUrl = theUrl + "&student_name=" + student + "&course_name=" + course + "&grade=" + grade + "&date=" + date + "&teacher_name=" + teacher;
+			theUrl = theUrl + "&student_name=" + student + "&course_name=" + course + "&grade=" + grade + "&gradedate=" + date + "&teacher_name=" + teacher;
 		    var xmlHttp = new XMLHttpRequest();
 		    xmlHttp.onreadystatechange = function() { 
 		        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
