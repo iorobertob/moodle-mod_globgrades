@@ -31,10 +31,10 @@ class mod_globgrades_external extends external_api {
     public static function hello_world_parameters() {
         return new external_function_parameters(
                 array(  'course'        => new external_value(PARAM_TEXT, 'Default course', VALUE_DEFAULT, 'Course name'),
-                        'student_name'  => new external_value(PARAM_TEXT, 'Default student ', VALUE_DEFAULT, 'Student name ')
-                        'course_name'   => new external_value(PARAM_TEXT, 'Default course name', VALUE_DEFAULT, 'Course name') 
-                        'grade'         => new external_value(PARAM_INT, 'Default grade', VALUE_DEFAULT, 0) 
-                        'gradedate'     => new external_value(PARAM_INT, 'Default date', VALUE_DEFAULT, 0) 
+                        'student_name'  => new external_value(PARAM_TEXT, 'Default student ', VALUE_DEFAULT, 'Student name '),
+                        'course_name'   => new external_value(PARAM_TEXT, 'Default course name', VALUE_DEFAULT, 'Course name'), 
+                        'grade'         => new external_value(PARAM_INT, 'Default grade', VALUE_DEFAULT, 0), 
+                        'gradedate'     => new external_value(PARAM_INT, 'Default date', VALUE_DEFAULT, 0), 
                         'teacher_name'  => new external_value(PARAM_TEXT, 'Default teacher', VALUE_DEFAULT, 'Teacher name')  )
         );
     }
