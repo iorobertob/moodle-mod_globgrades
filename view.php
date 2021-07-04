@@ -79,7 +79,7 @@ $PAGE->set_heading(format_string($course->fullname));
 //     $fileurl = $CFG->dataroot."/filedir/".substr($fileid, 0,2)."/".substr($fileid, 2,2)."/".$fileid;
 
 //     unset($files);
-}
+// }
 //=============================  /GET FILE    ===================================
 
 $PAGE->set_context($modulecontext);
