@@ -43,8 +43,8 @@ class mod_globgrades_external extends external_api {
 
         // //Parameter validation
         // //REQUIRED
-        // $params = self::validate_parameters(self::hello_world_parameters(),
-        //         array('welcomemessage' => $welcomemessage));
+        $params = self::validate_parameters(self::hello_world_parameters(),
+                array('welcomemessage' => $welcomemessage));
 
         //Context validation
         //OPTIONAL but in most web service it should present
@@ -62,7 +62,7 @@ class mod_globgrades_external extends external_api {
 
 
         $new_grade = new stdClass();
-        $new_grade -> course = "programavimas";
+        $new_grade -> course = $params -> welcomemessage;
         $new_grade -> student_name = "ramon";
         $new_grade -> course_name = "programavimas";
         $new_grade -> grade = 98;
