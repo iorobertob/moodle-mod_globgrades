@@ -93,7 +93,7 @@ if ($moduleinstance->inputdisplay === "1"){
 else{
     $grades = $DB->get_records("globgradesgrades", null, '', "id,student_name,course_name,grade,gradedate,teacher_name");
     
-    $the_big_array = array(array( count($grades), "Course", "Grade", "Date", "Teacher"));
+    $the_big_array = array(array( "Student", "Course", "Grade", "Date", "Teacher"));
     foreach($grades as $one_grade){
         $gradeArray = array( $one_grade->student_name, $one_grade->course_name, $one_grade->grade, $one_grade->gradedate, $one_grade->teacher_name );
         $the_big_array[] = $gradeArray;

@@ -87,7 +87,8 @@
 	    $('#the_table').DataTable({
 	        fixedHeader: true,
 	        scrollY: '1000px',
-	        responsive:true
+	        responsive:true,
+    		bSort:false,
 	        });
     });
 </script>
