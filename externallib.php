@@ -81,7 +81,7 @@ class mod_globgrades_external extends external_api {
 
         $id = $DB->insert_record('globgrades_grades', $new_grade);
 
-        return "Grade saved with ID  ".$id . "and date " . $new_grade -> gradedate;
+        return "Grade saved with ID  ".$id . " and date " . $new_grade -> gradedate;
     }
 
     /**
