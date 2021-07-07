@@ -76,7 +76,6 @@
 					type="date" 
 					id="date" 
 					name="date"
-       				value="2018-07-22"
        				min="2018-01-01">
 			</td>
 		</tr>
