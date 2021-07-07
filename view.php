@@ -91,7 +91,7 @@ if ($moduleinstance->inputdisplay === "1"){
     echo (globgrades_build_input_table("", $course, "separator", $moduleinstance->name));
 }
 else{
-    $grades = $DB->get_records("globgradesgrades", null, '', "id,student_name,course_name,grade,gradedate,teacher_name");
+    $grades = $DB->get_records("globgrades_grades", null, '', "id,student_name,course_name,grade,gradedate,teacher_name");
     
     $the_big_array = array(array( "Student", "Course", "Grade", "Date", "Teacher"));
     
