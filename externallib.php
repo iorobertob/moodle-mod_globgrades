@@ -79,7 +79,7 @@ class mod_globgrades_external extends external_api {
         $new_grade -> gradedate = $params['gradedate'];
         $new_grade -> teacher_name = $params['teacher_name'];
 
-        $id = $DB->insert_record('globgradesgrades', $new_grade);
+        $id = $DB->insert_record('globgrades_grades', $new_grade);
 
         return "oh lala: ".$id;
     }
