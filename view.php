@@ -98,7 +98,8 @@ else{
     foreach($grades as $one_grade)
     {
         // $grade_date_str  = date("Y-m-d", substr($one_grade->gradedate, 0, 9));
-        $grade_date_str  = date("Y-m-d", $one_grade->gradedate/1000);
+        // $grade_date_str  = date("Y-m-d", $one_grade->gradedate/1000);
+        $grade_date_str  = gmdate("Y-m-d\TH:i:s\Z", $one_grade->gradedate/1000);
         $gradeArray      = array( $one_grade->student_name, $one_grade->course_name, $one_grade->grade, $grade_date_str, $one_grade->teacher_name );
         $the_big_array[] = $gradeArray;
     }
