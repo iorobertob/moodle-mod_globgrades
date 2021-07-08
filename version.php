@@ -26,6 +26,6 @@ defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_globgrades';
 $plugin->release = '0.0.2';
-$plugin->version = 2021010805;
+$plugin->version = 2021070800;
 $plugin->requires = 2016120500;
 $plugin->maturity = MATURITY_ALPHA;

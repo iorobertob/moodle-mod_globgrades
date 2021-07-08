@@ -72,7 +72,8 @@ class restore_globgrades_activity_structure_step extends restore_activity_struct
      * Defines post-execution actions.
      */
     protected function after_execute() {
-        $this->add_related_files('mod_globgrades', 'intro', null);
-        $this->add_related_files('mod_globgrades', 'content', null);
+        // These are examples, there are no files in this plugin.
+        // $this->add_related_files('mod_globgrades', 'intro', null);
+        // $this->add_related_files('mod_globgrades', 'content', null);
     }
 }

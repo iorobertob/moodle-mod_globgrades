@@ -122,7 +122,7 @@
 </script>
 
 <script>
-   	function httpGetAsync(theUrl="https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json&student_name=simon&grade=99", callback)
+   	function httpGetAsync(theUrl="https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_input_grades&moodlewsrestformat=json&student_name=simon&grade=99", callback)
 		{
 			var student = document.getElementById("student_name").value;
 			var course 	= document.getElementById("course_name").value;
@@ -131,7 +131,8 @@
 			var date 	= document.getElementById("date").value;
 			var date_linux 	= Date.parse(date);
 			
-			var theUrl  = "https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_hello_world&moodlewsrestformat=json";
+			// var theUrl  = "https://education.ideas-block.com/webservice/rest/server.php?wstoken=daae7ac0dd870aff236e2378ab1a2595&wsfunction=mod_globgrades_input_grades&moodlewsrestformat=json";
+			var theUrl = "<?php echo($moduleinstance->url); ?>" + "?wstoken=" + "<?php echo($moduleinstance->token); ?>" + "&wsfunction=mod_globgrades_input_grades&moodlewsrestformat=json";
 			
 			theUrl = theUrl + "&student_name=" + student + "&course_name=" + course + "&grade=" + grade + "&gradedate=" + date_linux + "&teacher_name=" + teacher;
 		    var xmlHttp = new XMLHttpRequest();

@@ -28,4 +28,11 @@ defined('MOODLE_INTERNAL') || die();
 if ($ADMIN->fulltree) {
    // TODO: Define the plugin settings page.
    // https://docs.moodle.org/dev/Admin_settings
+
+   $settings->add(new admin_setting_configtext('mod_globgrades/url', get_string('url', 'globgrades'),
+            '', "URL", PARAM_TEXT));
+
+   $settings->add(new admin_setting_configtext('mod_globgrades/token', get_string('token', 'globgrades'),
+            '', "Title", PARAM_TEXT));
+TOken
 }

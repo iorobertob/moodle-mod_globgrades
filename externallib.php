@@ -28,7 +28,7 @@ class mod_globgrades_external extends external_api {
      * Returns description of method parameters
      * @return external_function_parameters
      */
-    public static function hello_world_parameters() {
+    public static function input_grades_parameters() {
         return new external_function_parameters(
                 array(  'course'        => new external_value(PARAM_TEXT, 'Default course', VALUE_DEFAULT, 'Course name'),
                         'student_name'  => new external_value(PARAM_TEXT, 'Default student ', VALUE_DEFAULT, 'Student name '),
@@ -43,12 +43,12 @@ class mod_globgrades_external extends external_api {
      * Returns welcome message
      * @return string welcome message
      */
-    public static function hello_world($course = 'Course name', $student_name = "student name", $course_name = "course_name", $grade=0, $gradedate=0, $teacher_name="teacher name") {
+    public static function input_grades($course = 'Course name', $student_name = "student name", $course_name = "course_name", $grade=0, $gradedate=0, $teacher_name="teacher name") {
         global $USER, $DB;
 
         // //Parameter validation
         // //REQUIRED
-        $params = self::validate_parameters(self::hello_world_parameters(),
+        $params = self::validate_parameters(self::input_grades_parameters(),
                 array(  'course'        => $course,
                         'student_name'  => $student_name,
                         'course_name'   => $course_name,
@@ -88,7 +88,7 @@ class mod_globgrades_external extends external_api {
      * Returns description of method result value
      * @return external_description
      */
-    public static function hello_world_returns() {
+    public static function input_grades_returns() {
         return new external_value(PARAM_TEXT, 'The welcome message + user first name');
     }
 

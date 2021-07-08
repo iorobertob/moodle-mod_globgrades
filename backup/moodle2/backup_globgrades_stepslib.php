@@ -50,7 +50,11 @@ class backup_globgrades_activity_structure_step extends backup_activity_structur
                                             array('id'), 
                                             array(
                                                 'name',
-                                                'separationchar',
+                                                'course',
+                                                'intro',
+                                                'inputdisplay',
+                                                'token',
+                                                'url',
                                                 'timecreated',
                                                 'timemodified'));
         // Build the tree with these elements with $root as the root of the backup tree.
@@ -61,10 +65,7 @@ class backup_globgrades_activity_structure_step extends backup_activity_structur
         // Define id annotations.
 
         // Define file annotations.
-        $globgrades->annotate_files('mod_globgrades', 'intro', null);
-        $globgrades->annotate_files('mod_globgrades', 'content', null); // This file areas haven't itemid
-        $globgrades->annotate_files('mod_globgrades', 'file', null); // This file areas haven't itemid
-
+        // $globgrades->annotate_files('mod_globgrades', 'intro', null); // Example, there is no file in this plugin
         return $this->prepare_activity_structure($globgrades);
     }
 }

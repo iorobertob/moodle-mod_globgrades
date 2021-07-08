@@ -33,6 +33,7 @@ $capabilities = [
         'archetypes' => [
             'student' => CAP_ALLOW,
             'editingteacher' => CAP_ALLOW,
+            'guest' => CAP_ALLOW,
         ],
         'clonepermissionsfrom' => 'moodle/course:view',
     ],
