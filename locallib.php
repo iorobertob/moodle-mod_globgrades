@@ -83,7 +83,7 @@ class globgrades_content_file_info extends file_info_stored {
 }
 
 
-function globgrades_build_input_table($file_url, $course, $separator, $name)
+function globgrades_build_input_table($file_url, $course, $separator, $name, $moduleinstance)
 {
     global $PAGE, $DB;
  
