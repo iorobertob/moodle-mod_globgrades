@@ -103,8 +103,10 @@ function globgrades_update_instance($moduleinstance, $mform = null) {
     require_once("$CFG->libdir/resourcelib.php");
     require_once("$CFG->dirroot/mod/globgrades/locallib.php");
 
-    $moduleinstance->timemodified = time();
-    $moduleinstance->id = $moduleinstance->instance;
+    $moduleinstance->timemodified   = time();
+    $moduleinstance->id             = $moduleinstance->instance;
+    $moduleinstance->url            = get_config('mod_globgrades','url' );
+    $moduleinstance->token          = get_config('mod_globgrades','token' );
 
     $revision = $DB->get_record('globgrades', array('id'=>$moduleinstance->id), '*', MUST_EXIST)->revision;
     $revision ++;
