@@ -61,9 +61,11 @@ function globgrades_add_instance($moduleinstance, $mform = null) {
     require_once("$CFG->libdir/resourcelib.php");
     
     $cmid = $moduleinstance->coursemodule;
-    $moduleinstance->timecreated = time();
-    $moduleinstance->revision = 1;
-    
+    $moduleinstance->timecreated    = time();
+    $moduleinstance->revision       = 1;
+    $moduleinstance->url            = get_config('mod_globgrades','url' );
+    $moduleinstance->token          = get_config('mod_globgrades','token' );
+
     $id = $DB->insert_record('globgrades', $moduleinstance);
     $moduleinstance->id = $id;
 
