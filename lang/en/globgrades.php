@@ -55,3 +55,7 @@ $string['pluginnameediting'] = 'Rendered when editing this module.';
 $string['pluginnamesummary'] = 'Rendered when choosing the module to be added.';
 $string['view'] = 'View';
 $string['resourcecontent'] = 'Files and subfolders';
+$string['url'] = 'Moodle instance URL';
+$string['token'] = 'Token for external service';
+$string['url_description'] = 'Has to have this format: https://yourmoodle.com/webservice/rest/server.php';
+$string['token_description'] = 'Token obtained from Settings -> Server -> External services -> globgrades';
