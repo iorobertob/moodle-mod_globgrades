@@ -34,5 +34,5 @@ if ($ADMIN->fulltree) {
 
    $settings->add(new admin_setting_configtext('mod_globgrades/token', get_string('token', 'globgrades'),
             '', "Title", PARAM_TEXT));
-TOken
+
 }
