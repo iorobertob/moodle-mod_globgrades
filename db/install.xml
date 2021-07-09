@@ -12,7 +12,7 @@
         <FIELD NAME="intro"           TYPE="text"              NOTNULL="false"             SEQUENCE="false"/>
         <FIELD NAME="inputdisplay"    TYPE="text"              NOTNULL="false" DEFAULT="1" SEQUENCE="false"/>
         <FIELD NAME="token"           TYPE="char" LENGTH="255" NOTNULL="true"  DEFAULT=""  SEQUENCE="false"/>
-        <FIELD NAME="url"             TYPE="char" LENGTH="255" NOTNULL="true"  DEFAULT="https://moodle.lmta.lt/webservice/rest/server.php" SEQUENCE="false"/>
+        <FIELD NAME="url"             TYPE="char" LENGTH="255" NOTNULL="true"  DEFAULT=""  SEQUENCE="false"/>
         <FIELD NAME="tobemigrated"    TYPE="int"  LENGTH="4"   NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
         <FIELD NAME="display"         TYPE="int"  LENGTH="4"   NOTNULL="true"  DEFAULT="0" SEQUENCE="false"/>
         <FIELD NAME="displayoptions"  TYPE="text"              NOTNULL="false"             SEQUENCE="false"/>
