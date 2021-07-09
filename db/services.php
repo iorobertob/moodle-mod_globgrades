@@ -27,7 +27,7 @@ $functions = array(
                 'classname'   => 'mod_globgrades_external',
                 'methodname'  => 'input_grades',
                 'classpath'   => 'mod/globgrades/externallib.php',
-                'description' => 'Return Hello World FIRSTNAME. Can change the text (Hello World) sending a new text as parameter',
+                'description' => 'Inputs grades one by one into a global table.',
                 'type'        => 'read',
         ) 
 );

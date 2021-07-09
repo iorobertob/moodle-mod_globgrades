@@ -58,4 +58,4 @@ $string['resourcecontent'] = 'Files and subfolders';
 $string['url'] = 'Moodle instance URL';
 $string['token'] = 'Token for external service';
 $string['url_description'] = 'Has to have this format: https://yourmoodle.com/webservice/rest/server.php';
-$string['token_description'] = 'Token obtained from Settings -> Server -> External services -> globgrades';
+$string['token_description'] = 'Token obtained from Settings -> Server -> Manage tokens -> Add token for globgrades';
