@@ -90,7 +90,7 @@ echo $OUTPUT->header();
 if ($moduleinstance->inputdisplay === "1")
 {
     $
-    echo (globgrades_build_input_table("", $course, "separator", $moduleinstance->name), $moduleinstance);
+    echo (globgrades_build_input_table("", $course, "separator", $moduleinstance->name, $moduleinstance));
 }
 else
 {
